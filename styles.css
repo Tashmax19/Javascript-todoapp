@@ -1,3 +1,6 @@
-.our-input{
-    
+.finished {
+  text-decoration: line-through;
+}
+.finished::before {
+  content: "✔️";
 }
