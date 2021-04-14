@@ -1,7 +1,6 @@
 // Referenciing all the necessary Elements.
 
 let ourInput = document.querySelector(".our-input");
-let ourBtn = document.querySelector(".our-btn");
 let ourTodoList = document.querySelector(".our-todolist");
 
 // console.log(ourInput, ourBtn, ourTodoList);
@@ -28,7 +27,7 @@ function AddTodo() {
   }
 }
 
-ourBtn.addEventListener("click", AddTodo);
+ourInput.addEventListener("change", AddTodo);
 
 // Remove Todo
 function RemoveTodo() {
