@@ -12,9 +12,14 @@ function AddTodo() {
     let ourLi = document.createElement("li");
     // set the innetHTML to the input value.
 
+    //set attribute
+  ourLi.setAttribute("class","list-group-item list-group-item-action");
+  //ourLi.style.backgroundColor=r
+ // ourLi.style.backgroundColor= "#f4f0ec";
+
     // concatenating the value to an html button
     // ourLi.innerHTML = ourInput.value+"<button> delete</button>"
-    ourLi.innerHTML = `${ourInput.value}<button class='del-btn'> x </button>`;
+    ourLi.innerHTML = `${ourInput.value}<button class='del-btn btn position-absolute bottom-0 end-0'> <i class="fa fa-trash danger"> </button>`;
 
     // This adds the li from line 13 to the ol which is in our html
     ourTodoList.appendChild(ourLi);
@@ -32,7 +37,7 @@ ourInput.addEventListener("change", AddTodo);
 // Remove Todo
 function RemoveTodo() {
   let removeBtns = document.querySelectorAll(".del-btn");
-
+  //removeBtns.setAttribute("class","btn me-auto")
   removeBtns.forEach(function (button) {
     button.addEventListener("click", function () {
       this.parentElement.remove();
