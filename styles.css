@@ -1,10 +1,10 @@
 .finished {
   text-decoration: line-through;
 }
-.finished::before {
+/* .finished::before {
   content: "✔️";
   padding-left: 10px;
-}
+} */
 
 .card{
   width:400px;
